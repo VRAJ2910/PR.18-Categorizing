@@ -130,6 +130,10 @@ int main() {
                 break;
 
             case 3:
+                cout << "Sorting the array before performing Linear Search..." << endl;
+                selectionSort(arr);
+                cout << "Sorted array: ";
+                displayArray(arr);
                 cout << "Enter element to search for: ";
                 cin >> target;
                 result = linearSearch(arr, target);
@@ -141,11 +145,12 @@ int main() {
                 break;
 
             case 4:
+                cout << "Sorting the array before performing Binary Search..." << endl;
+                bubbleSort(arr); 
+                cout << "Sorted array: ";
+                displayArray(arr);
                 cout << "Enter element to search for: ";
                 cin >> target;
-                bubbleSort(arr);
-                cout << "Array sorted for Binary Search: ";
-                displayArray(arr);
                 result = binarySearch(arr, target);
                 if (result != -1) {
                     cout << "Element found at index " << result << endl;
